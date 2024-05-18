@@ -1,13 +1,8 @@
 # Use this script to download a .onnx model and a .json via wget
 # Provide a direct download link to the .onnx file and the .json file as arguments
-
-# Using the wget library
-
 import subprocess
-import wget
 import sys
 import os
-
 
 # If no args are provided, exit
 if len(sys.argv) < 3:
@@ -37,5 +32,5 @@ filename_model = os.path.join(target_folder, "model.onnx")
 filename_json = filename_model + ".json"
 
 # Use subprocess and getfile.py to download the .onnx and .json file
-subprocess.run(['python', f"{folder}/getfile.py", link_model, filename_model])
-subprocess.run(['python', f"{folder}/getfile.py", link_json, filename_json])
+subprocess.run(['python3', f"{folder}/getfile.py", link_model, filename_model])
+subprocess.run(['python3', f"{folder}/getfile.py", link_json, filename_json])

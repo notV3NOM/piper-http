@@ -2,18 +2,13 @@
 # The link should be the DIRECT  link to the .onnx file. 
 # # The script will also download the .json in the same folder.
 
-
-# Using the wget library
 import subprocess
-import wget
 import sys
 import os
-
 
 # Get the model from huggigface repo from piper-voices
 # Example link for .onnx: https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/de/de_DE/mls/medium/de_DE-mls-medium.onnx?download=true
 # Example link for .json: https://huggingface.co/rhasspy/piper-voices/raw/v1.0.0/de/de_DE/mls/medium/de_DE-mls-medium.onnx.json
-
 
 # If no argument is given, print usage
 if len(sys.argv) < 3:
@@ -33,4 +28,4 @@ link_json = link_model.split('?')[0]
 link_json = link_json + ".json"
 
 # Use download.py to download the .onnx file and the .json file which is in this folder
-subprocess.run(['python', f"{folder}/download-model.py", link_model, link_json, target_folder])
+subprocess.run(['python3', f"{folder}/download-model.py", link_model, link_json, target_folder])
