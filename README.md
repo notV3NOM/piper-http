@@ -8,7 +8,7 @@ https://hub.docker.com/r/notv3nom/piper-http-gpu
 
 This image uses [lessac-high](https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/high/en_US-lessac-high.onnx?download=true) voice
 ```bash
-docker run -d --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --name piper-http-gpu -p 5000:5000 notv3nom/piper-http-gpu:0.1
+docker run -d --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 --name piper-http-gpu -p 5000:5000 notv3nom/piper-http-gpu
 ```
 
 ## Steps:
